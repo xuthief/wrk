@@ -1,4 +1,4 @@
-wrk next
+wrk 4.0.0
 
  * The wrk global variable is the only global defined by default.
  * wrk.init() calls the global init(), remove calls to wrk.init().
