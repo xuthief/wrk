@@ -1,7 +1,8 @@
 -- example HTTP POST script which demonstrates setting the
 -- HTTP method, body, and adding a header
 
-index = os.time()
+action = "rem"
+
 maxuid = 100000
 maxappkey = 10
 maxtopic = 1000
@@ -9,7 +10,8 @@ septopic = maxuid
 sepappkey = maxuid * maxtopic
 maxindex = maxuid * maxappkey * maxtopic
 
-action = "rem"
+math.randomseed(os.time())
+index = math.random(maxindex)
 
 request = function()
     index = (index + 1) % maxindex
