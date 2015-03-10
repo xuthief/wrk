@@ -28,7 +28,7 @@ request = function()
     topic = "topic" .. indextopic
     wrk.body = '{"action":"' .. action .. '", "topic":"' .. appkey .. '/' .. topic .. '", "uid":"' .. uid .. '", "cid":"' .. cid .. '", "platform": 1}'
 
-    print(wrk.body)
+    --print(wrk.body)
 
     return wrk.format(nil, "/.topicfs")
 end
