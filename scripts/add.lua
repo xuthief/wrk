@@ -10,7 +10,8 @@ septopic = maxuid
 sepappkey = maxuid * maxtopic
 maxindex = maxuid * maxappkey * maxtopic
 
-math.randomseed(os.time())
+os.execute("sleep 2");
+math.randomseed(os.time() * 100)
 index = math.random(maxindex)
 
 request = function()
@@ -26,6 +27,8 @@ request = function()
     appkey = "appkey" .. indexappkey
     topic = "topic" .. indextopic
     wrk.body = '{"action":"' .. action .. '", "topic":"' .. appkey .. '/' .. topic .. '", "uid":"' .. uid .. '", "cid":"' .. cid .. '", "platform": 1}'
+
+    print(wrk.body)
 
     return wrk.format(nil, "/.topicfs")
 end
