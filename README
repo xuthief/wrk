@@ -46,6 +46,6 @@ Acknowledgements
   details.
 
 Yunba etfs
-./wrk -t2 -c40 -d30000s -s ./scripts/get.lua http://abj-cbmsg-3:8088/
-./wrk -t2 -c4000 -d30000s -s ./scripts/add.lua http://abj-cbmsg-3:8088/
-./wrk -t2 -c4000 -d30000s -s ./scripts/rem.lua http://abj-cbmsg-3:8088/
+./wrk -t2 -c40 -d30000s -s ./scripts/get.lua http://localhost:8088/
+./wrk -t2 -c4000 -d30000s -s ./scripts/add.lua http://localhost:8088/
+./wrk -t2 -c4000 -d30000s -s ./scripts/rem.lua http://localhost:8088/
